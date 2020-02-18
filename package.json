@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build_prod": "ng build --prod --output-path docs --base-href privatecircleTask",
-    "build_ngh": "ngh --dir=dist/docs",
+    "build_ngh": "ngh --dir=docs",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
