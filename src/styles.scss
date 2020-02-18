@@ -1,1 +1,161 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content-body {
+    width: 100%;
+    display: block;
+    position: relative;
+    clear: both;
+
+    .filter-box {
+        clear: both;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        padding: 15px;
+        background: #efefef;
+
+        ul {
+            width: 60%;
+            list-style-type: none;
+            display: block;
+            float: left;
+
+            li {
+                display: inline-block;
+                padding: 10px 30px;
+
+                &:first-child {
+                    background: red;
+                    color: #ffffff;
+                }
+
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .search-box {
+            width: 40%;
+            float: left;
+
+            input {
+                width: 100%;
+                min-height: 44px;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                padding: 10px 15px;
+            }
+        }
+
+    }
+
+    .table-box {
+        width: 70%;
+        display: block;
+        overflow: hidden;
+        clear: both;
+        height: calc(100vh - 75px);
+        float: left;
+        overflow-y: scroll;
+        table {
+            width: 100%;
+            thead {
+                tr {
+                    th {
+                        padding: 10px;
+                        text-align: left;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    &:hover {
+                        background: #efefef;
+
+                        td:last-child {
+
+                            button {
+                                color: #040404;
+                                background: #ffffff;
+                                border-bottom: 2px solid #040404;
+                            }
+                        }
+                    }
+
+                    td {
+                        padding: 10px;
+                        column-span: none;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+                        .material-icons{
+                            margin-right: 20px;
+                        }
+
+                        &:last-child {
+                            text-align: center;
+
+                            button {
+                                padding: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .entity_details {
+        width: 30%;
+        max-height: calc(100vh - 60px);
+        overflow-y: scroll;
+        float: left;
+        padding: 10px;
+        height: calc(100vh - 75px);
+
+        .nod-desc{
+            background: #efefef;
+            padding: 15px;
+
+            a{
+                &:hover,
+                &:active,
+                &:focus{
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                margin-left: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+
+        .data_holder{
+            font-size: 18px;
+            color: cornflowerblue;
+            margin: 20px auto;
+
+            &:first-child{
+                margin-top: 40px;
+            }
+        }
+    }
+}
