@@ -28,7 +28,7 @@ body {
         width: 100%;
         overflow: hidden;
         padding: 15px;
-        background: #efefef;
+        background: #f5f5f5;
 
         ul {
             width: 60%;
@@ -39,14 +39,17 @@ body {
             li {
                 display: inline-block;
                 padding: 10px 30px;
+                color: #424242;
+                cursor: pointer;
 
                 &:first-child {
-                    background: red;
+                    background: #002b42;
                     color: #ffffff;
                 }
 
                 i {
                     vertical-align: middle;
+                    margin-right: 10px;
                 }
             }
         }
@@ -76,11 +79,17 @@ body {
         overflow-y: scroll;
         table {
             width: 100%;
+            border-collapse: collapse;
+
             thead {
                 tr {
                     th {
                         padding: 10px;
                         text-align: left;
+                        color: #9f9f9f;
+                        &:nth-child(3){
+                            text-align: right;
+                        }
                     }
                 }
             }
@@ -88,35 +97,54 @@ body {
             tbody {
                 tr {
                     &:hover {
-                        background: #efefef;
+                        background: #f5f5f5;
 
-                        td:last-child {
+                        td {
+                            border-bottom: 1px solid transparent;
 
-                            button {
-                                color: #040404;
-                                background: #ffffff;
-                                border-bottom: 2px solid #040404;
+                            .material-icons{
+                                color: #000000;
+                            }
+
+                            &:last-child {
+                                button {
+                                    padding: 10px 25px 8px;
+                                    color: #002b42;
+                                    background: #ffffff;
+                                    border-bottom: 2px solid #002b42;
+                                }
                             }
                         }
                     }
 
                     td {
+                        width: 18%;
                         padding: 10px;
                         column-span: none;
                         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
+                        &:nth-child(3){
+                            text-align: right;
+                        }
+
                         .material-icons{
                             margin-right: 20px;
+                            color: #d6d6d6;
+                            cursor: pointer;
                         }
 
                         &:last-child {
                             text-align: center;
 
                             button {
-                                padding: 10px;
+                                padding: 10px 25px;
                                 cursor: pointer;
                             }
                         }
+                    }
+
+                    .shared-actions {
+                        width: 28%;
                     }
                 }
             }
@@ -141,16 +169,18 @@ body {
                 &:focus{
                     text-decoration: none;
                     font-weight: bold;
+                    color: #56869d;
                 }
                 margin-left: 5px;
                 text-decoration: none;
                 font-weight: bold;
+                color: #56869d;
             }
         }
 
         .data_holder{
             font-size: 18px;
-            color: cornflowerblue;
+            color: #7b9eb1;
             margin: 20px auto;
 
             &:first-child{

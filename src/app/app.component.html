@@ -34,7 +34,7 @@
                 <td>{{row['date'] | date}}</td>
                 <td>{{row['list_name']}}</td>
                 <td>{{row['no_of_enties']}}</td>
-                <td>
+                <td class="shared-actions">
                     <i class="material-icons">email</i>
                     <i class="material-icons" *ngIf="row['no_of_enties'] > 0">share</i>
                     <i class="material-icons" *ngIf="row['no_of_enties'] > 0">edit</i>
